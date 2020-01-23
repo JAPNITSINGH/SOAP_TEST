@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Use this file to deploy some handlers/chains and services      --><!-- Two ways to do this:                                           --><!--   java org.apache.axis.client.AdminClient deploy.wsdd          --><!--      after the axis server is running                          --><!-- or                                                             --><!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   --><!--      from the same directory that the Axis engine runs         --><deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from ProductServiceService WSDL service -->
+
+  <service name="ProductService" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://service.accolite.com"/>
+      <parameter name="wsdlServiceElement" value="ProductServiceService"/>
+      <parameter name="schemaQualified" value="http://service.accolite.com"/>
+      <parameter name="wsdlServicePort" value="ProductService"/>
+      <parameter name="className" value="com.accolite.service.ProductService"/>
+      <parameter name="wsdlPortType" value="ProductService"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation xmlns:operNS="http://service.accolite.com" xmlns:retNS="http://service.accolite.com" xmlns:rtns="http://service.accolite.com" name="searchByID" qname="operNS:searchByID" returnQName="retNS:searchByIDReturn" returnType="rtns:Product" soapAction="">
+        <parameter xmlns:pns="http://service.accolite.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:id" type="tns:int"/>
+      </operation>
+      <operation xmlns:operNS="http://service.accolite.com" xmlns:retNS="http://service.accolite.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="insertProduct" qname="operNS:insertProduct" returnQName="retNS:insertProductReturn" returnType="rtns:boolean" soapAction="">
+        <parameter xmlns:pns="http://service.accolite.com" xmlns:tns="http://service.accolite.com" qname="pns:p" type="tns:Product"/>
+      </operation>
+      <operation xmlns:operNS="http://service.accolite.com" xmlns:retNS="http://service.accolite.com" xmlns:rtns="http://service.accolite.com" name="getAllProducts" qname="operNS:getAllProducts" returnQName="retNS:getAllProductsReturn" returnType="rtns:Product" soapAction="">
+      </operation>
+      <parameter name="allowedMethods" value="getAllProducts searchByID insertProduct"/>
+
+      <typeMapping xmlns:ns="http://service.accolite.com" qname="ns:Product" type="java:com.accolite.service.Product" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
+  </service>
+</deployment>
