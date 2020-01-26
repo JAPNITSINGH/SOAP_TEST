@@ -4,6 +4,26 @@
 Built on Apr 22, 2006 (06:55:48 PDT)-->
  <wsdl:types>
   <schema elementFormDefault="qualified" targetNamespace="http://service.accolite.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="deleteProduct">
+    <complexType>
+     <sequence>
+      <element name="p" type="impl:Product"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="Product">
+    <sequence>
+     <element name="id" type="xsd:int"/>
+     <element name="name" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <element name="deleteProductResponse">
+    <complexType>
+     <sequence>
+      <element name="deleteProductReturn" type="xsd:boolean"/>
+     </sequence>
+    </complexType>
+   </element>
    <element name="searchByID">
     <complexType>
      <sequence>
@@ -18,12 +38,16 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
      </sequence>
     </complexType>
    </element>
-   <complexType name="Product">
-    <sequence>
-     <element name="id" type="xsd:int"/>
-     <element name="name" nillable="true" type="xsd:string"/>
-    </sequence>
-   </complexType>
+   <element name="getAllProducts">
+    <complexType/>
+   </element>
+   <element name="getAllProductsResponse">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" name="getAllProductsReturn" type="impl:Product"/>
+     </sequence>
+    </complexType>
+   </element>
    <element name="insertProduct">
     <complexType>
      <sequence>
@@ -38,18 +62,30 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
      </sequence>
     </complexType>
    </element>
-   <element name="getAllProducts">
-    <complexType/>
-   </element>
-   <element name="getAllProductsResponse">
+   <element name="updateProduct">
     <complexType>
      <sequence>
-      <element maxOccurs="unbounded" name="getAllProductsReturn" type="impl:Product"/>
+      <element name="p" type="impl:Product"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="updateProductResponse">
+    <complexType>
+     <sequence>
+      <element name="updateProductReturn" type="xsd:boolean"/>
      </sequence>
     </complexType>
    </element>
   </schema>
  </wsdl:types>
+
+   <wsdl:message name="deleteProductResponse">
+
+      <wsdl:part element="impl:deleteProductResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
 
    <wsdl:message name="insertProductResponse">
 
@@ -83,9 +119,33 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
    </wsdl:message>
 
+   <wsdl:message name="updateProductRequest">
+
+      <wsdl:part element="impl:updateProduct" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
    <wsdl:message name="getAllProductsRequest">
 
       <wsdl:part element="impl:getAllProducts" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="deleteProductRequest">
+
+      <wsdl:part element="impl:deleteProduct" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="updateProductResponse">
+
+      <wsdl:part element="impl:updateProductResponse" name="parameters">
 
       </wsdl:part>
 
@@ -101,6 +161,18 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
    <wsdl:portType name="ProductService">
 
+      <wsdl:operation name="deleteProduct">
+
+         <wsdl:input message="impl:deleteProductRequest" name="deleteProductRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:deleteProductResponse" name="deleteProductResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
       <wsdl:operation name="searchByID">
 
          <wsdl:input message="impl:searchByIDRequest" name="searchByIDRequest">
@@ -108,18 +180,6 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
        </wsdl:input>
 
          <wsdl:output message="impl:searchByIDResponse" name="searchByIDResponse">
-
-       </wsdl:output>
-
-      </wsdl:operation>
-
-      <wsdl:operation name="insertProduct">
-
-         <wsdl:input message="impl:insertProductRequest" name="insertProductRequest">
-
-       </wsdl:input>
-
-         <wsdl:output message="impl:insertProductResponse" name="insertProductResponse">
 
        </wsdl:output>
 
@@ -137,11 +197,53 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
       </wsdl:operation>
 
+      <wsdl:operation name="insertProduct">
+
+         <wsdl:input message="impl:insertProductRequest" name="insertProductRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:insertProductResponse" name="insertProductResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="updateProduct">
+
+         <wsdl:input message="impl:updateProductRequest" name="updateProductRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:updateProductResponse" name="updateProductResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
    </wsdl:portType>
 
    <wsdl:binding name="ProductServiceSoapBinding" type="impl:ProductService">
 
       <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="deleteProduct">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="deleteProductRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="deleteProductResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
 
       <wsdl:operation name="searchByID">
 
@@ -154,24 +256,6 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
          </wsdl:input>
 
          <wsdl:output name="searchByIDResponse">
-
-            <wsdlsoap:body use="literal"/>
-
-         </wsdl:output>
-
-      </wsdl:operation>
-
-      <wsdl:operation name="insertProduct">
-
-         <wsdlsoap:operation soapAction=""/>
-
-         <wsdl:input name="insertProductRequest">
-
-            <wsdlsoap:body use="literal"/>
-
-         </wsdl:input>
-
-         <wsdl:output name="insertProductResponse">
 
             <wsdlsoap:body use="literal"/>
 
@@ -197,13 +281,49 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
       </wsdl:operation>
 
+      <wsdl:operation name="insertProduct">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="insertProductRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="insertProductResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="updateProduct">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="updateProductRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="updateProductResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
    </wsdl:binding>
 
    <wsdl:service name="ProductServiceService">
 
       <wsdl:port binding="impl:ProductServiceSoapBinding" name="ProductService">
 
-         <wsdlsoap:address location="http://localhost:8080/SOAP_Demo/services/ProductService"/>
+         <wsdlsoap:address location="http://localhost:8980/SOAP_Demo/services/ProductService"/>
 
       </wsdl:port>
 

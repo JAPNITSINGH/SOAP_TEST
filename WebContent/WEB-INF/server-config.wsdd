@@ -7,8 +7,8 @@
   <ns1:parameter name="dotNetSoapEncFix" value="true"/>
   <ns1:parameter name="enableNamespacePrefixOptimization" value="false"/>
   <ns1:parameter name="sendXMLDeclaration" value="true"/>
-  <ns1:parameter name="sendXsiTypes" value="true"/>
   <ns1:parameter name="attachments.implementation" value="org.apache.axis.attachments.AttachmentsImpl"/>
+  <ns1:parameter name="sendXsiTypes" value="true"/>
   <ns1:requestFlow>
    <ns1:handler type="java:org.apache.axis.handlers.JWSHandler">
     <ns1:parameter name="scope" value="session"/>
@@ -33,14 +33,20 @@
   <ns1:parameter name="className" value="org.apache.axis.Version"/>
  </ns1:service>
  <ns1:service name="ProductService" provider="java:RPC" style="wrapped" use="literal">
-  <ns2:operation name="searchByID" qname="ns1:searchByID" returnQName="ns1:searchByIDReturn" returnType="ns1:Product" soapAction="" xmlns:ns1="http://service.accolite.com" xmlns:ns2="http://xml.apache.org/axis/wsdd/">
-   <ns2:parameter qname="ns1:id" type="xsd:int" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  <ns2:operation name="deleteProduct" qname="ns1:deleteProduct" returnQName="ns1:deleteProductReturn" returnType="xsd:boolean" soapAction="" xmlns:ns1="http://service.accolite.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ns2="http://xml.apache.org/axis/wsdd/">
+   <ns2:parameter qname="ns1:p" type="ns1:Product"/>
   </ns2:operation>
-  <ns1:operation name="insertProduct" qname="ns2:insertProduct" returnQName="ns2:insertProductReturn" returnType="xsd:boolean" soapAction="" xmlns:ns2="http://service.accolite.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-   <ns1:parameter qname="ns2:p" type="ns2:Product"/>
+  <ns1:operation name="searchByID" qname="ns2:searchByID" returnQName="ns2:searchByIDReturn" returnType="ns2:Product" soapAction="" xmlns:ns2="http://service.accolite.com">
+   <ns1:parameter qname="ns2:id" type="xsd:int" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
   </ns1:operation>
   <ns1:operation name="getAllProducts" qname="ns3:getAllProducts" returnQName="ns3:getAllProductsReturn" returnType="ns3:Product" soapAction="" xmlns:ns3="http://service.accolite.com"/>
-  <ns1:parameter name="allowedMethods" value="getAllProducts searchByID insertProduct"/>
+  <ns1:operation name="insertProduct" qname="ns4:insertProduct" returnQName="ns4:insertProductReturn" returnType="xsd:boolean" soapAction="" xmlns:ns4="http://service.accolite.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns4:p" type="ns4:Product"/>
+  </ns1:operation>
+  <ns1:operation name="updateProduct" qname="ns5:updateProduct" returnQName="ns5:updateProductReturn" returnType="xsd:boolean" soapAction="" xmlns:ns5="http://service.accolite.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns5:p" type="ns5:Product"/>
+  </ns1:operation>
+  <ns1:parameter name="allowedMethods" value="getAllProducts searchByID updateProduct insertProduct deleteProduct"/>
   <ns1:parameter name="typeMappingVersion" value="1.2"/>
   <ns1:parameter name="wsdlPortType" value="ProductService"/>
   <ns1:parameter name="className" value="com.accolite.service.ProductService"/>
@@ -48,7 +54,7 @@
   <ns1:parameter name="schemaQualified" value="http://service.accolite.com"/>
   <ns1:parameter name="wsdlTargetNamespace" value="http://service.accolite.com"/>
   <ns1:parameter name="wsdlServiceElement" value="ProductServiceService"/>
-  <ns1:typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns4:Product" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:com.accolite.service.Product" xmlns:ns4="http://service.accolite.com"/>
+  <ns1:typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns6:Product" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:com.accolite.service.Product" xmlns:ns6="http://service.accolite.com"/>
  </ns1:service>
  <ns1:transport name="http">
   <ns1:requestFlow>

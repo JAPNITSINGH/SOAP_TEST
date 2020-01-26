@@ -5,7 +5,7 @@ import java.util.List;
 
 public class ProductService {
 
-	private static List<Product> listOfProducts = new ArrayList<Product>();
+	private  List<Product> listOfProducts = new ArrayList<Product>();
 
 	public ProductService() {
 		
@@ -42,8 +42,17 @@ public class ProductService {
 	}
 	
 	public boolean deleteProduct(Product p)
-	{
-		return listOfProducts.remove(p);
+	{	
+		for(int i = 0 ; i <  listOfProducts.size() ; i++)
+		{
+			if( listOfProducts.get(i).getId() == p.getId())
+				 {
+					listOfProducts.remove(i);
+					return true;
+				 }
+		}
+		//return listOfProducts.remove(p);
+		return false;
 	}
 	
 	public boolean updateProduct(Product p)
