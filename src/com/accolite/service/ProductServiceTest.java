@@ -1,46 +1,54 @@
 package com.accolite.service;
 
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Logger;
 
+import org.apache.logging.log4j.Level;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.core.config.Configurator;
+import org.apache.logging.log4j.core.config.DefaultConfiguration;
+import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 
 
 
+
 class ProductServiceTest {
-	static Logger logger = Logger.getLogger(ProductServiceTest.class.getName());
+	
+	final static Logger logger = LogManager.getLogger(ProductServiceTest.class.getName());
 	private List<Product> listOfProducts = new ArrayList<Product>();
 	//List<Product> p = new ArrayList<Product>;
 	 
  	void init()
- 	{	listOfProducts.clear();
+ 	{	//BasicConfigurator.configure();
+ 		logger.info("init started");
+ 		listOfProducts.clear();
  		listOfProducts.add(new Product(1, "Apple"));
 		listOfProducts.add(new Product(2, "Banana"));
 		listOfProducts.add(new Product(3, "Carrot"));
 		listOfProducts.add(new Product(4, "Drum Sticks"));
-		//logger.info("inti() successful"); 
+		logger.info("inti() finished"); 
  	}
 
 	@Test
 	void testSearchByID() {
+		logger.info("testSearchByID() started");
 		ProductService ps = new ProductService();
 		Product expectedOutput = new Product(1, "Apple");
 		Product obtainedOutput = ps.searchByID(1);
-//		if(expectedOutput.getId() == obtainedOutput.getId())
-//			logger.info("testSearchByID() success");//System.out.println("testSearchByID() success");
-//		else
-//			fail("testSearchByID() failed");
-		//assert expectedOutput.getId() == 2 : "testSearchByID() failed";
-		 assertTrue(obtainedOutput.getId() == expectedOutput.getId());
-		logger.info("testSearchByID() success");
+		Assert.assertEquals(obtainedOutput.getId(),expectedOutput.getId());
+		logger.info("testSearchByID() finished");
 	}
 
 	@Test
 	void testGetAllProducts() {
+		logger.info("testGetAllProducts() started");
 		init();
 		Product[] expectedProducts = new Product[listOfProducts.size()];
 		for(int i = 0 ; i < listOfProducts.size() ; i++)
@@ -60,11 +68,12 @@ class ProductServiceTest {
 				break;
 			}
 		}
-		
+		logger.info("testGetAllProducts() finished");
 	}
 
 	@Test
 	void testDeleteProduct() {
+		logger.info("testDeleteProduct() started");
 		init();
 		ProductService ps = new ProductService();
 		boolean expectedOutput = true;
@@ -74,13 +83,14 @@ class ProductServiceTest {
 //			logger.info("testDeleteProduct() success");//System.out.println("testDeleteProduct() Success");
 //		else
 //			fail("testDeleteProduct() failed");
-		assertTrue(obtainedOutput == expectedOutput);
-		logger.info("testDeleteProduct() success");
+		Assert.assertEquals(obtainedOutput,expectedOutput);
+		logger.info("testDeleteProduct() finished");
 	}
 
 
 	@Test
 	void testInsertProduct() {
+		logger.info("testInsertProduct() started");
 		ProductService ps = new ProductService();
 		boolean expectedOutput = true;
 		boolean obtainedOutput = ps.insertProduct(new Product(5,"Egg"));
@@ -88,8 +98,8 @@ class ProductServiceTest {
 //			logger.info("testInsertProduct() success");//System.out.println("testInsertProduct() success");
 //		else
 //			fail("testInsertProduct()");
-		assertTrue(obtainedOutput == expectedOutput);
-		logger.info("testInsertProduct() success");
+		Assert.assertEquals(obtainedOutput,expectedOutput);
+		logger.info("testInsertProduct() finished");
 	}
 
 

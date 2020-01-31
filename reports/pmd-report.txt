@@ -26,195 +26,73 @@ src/com/accolite/service/Product.java:34:	CommentRequired: Public method and con
 src/com/accolite/service/Product.java:34:	CommentRequired: Public method and constructor comments are required
 src/com/accolite/service/Product.java:34:	UncommentedEmptyConstructor: Document empty constructor
 src/com/accolite/service/Product.java:34:	UncommentedEmptyConstructor: Document empty constructor
-src/com/accolite/service/ProductService.java:6:	CommentRequired: Class comments are required
-src/com/accolite/service/ProductService.java:6:	CommentRequired: Class comments are required
-src/com/accolite/service/ProductService.java:8:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
-src/com/accolite/service/ProductService.java:8:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
-src/com/accolite/service/ProductService.java:8:	CommentRequired: Field comments are required
-src/com/accolite/service/ProductService.java:8:	CommentRequired: Field comments are required
-src/com/accolite/service/ProductService.java:8:	ImmutableField: Private field 'listOfProducts' could be made final; it is only initialized in the declaration or constructor.
-src/com/accolite/service/ProductService.java:8:	ImmutableField: Private field 'listOfProducts' could be made final; it is only initialized in the declaration or constructor.
-src/com/accolite/service/ProductService.java:8:	UseDiamondOperator: Explicit type arguments can be replaced by Diamond Operator
-src/com/accolite/service/ProductService.java:8:	UseDiamondOperator: Explicit type arguments can be replaced by Diamond Operator
-src/com/accolite/service/ProductService.java:10:	CommentRequired: Public method and constructor comments are required
-src/com/accolite/service/ProductService.java:10:	CommentRequired: Public method and constructor comments are required
-src/com/accolite/service/ProductService.java:18:	CommentRequired: Public method and constructor comments are required
-src/com/accolite/service/ProductService.java:18:	CommentRequired: Public method and constructor comments are required
-src/com/accolite/service/ProductService.java:18:	MethodArgumentCouldBeFinal: Parameter 'id' is not assigned and could be declared final
-src/com/accolite/service/ProductService.java:18:	MethodArgumentCouldBeFinal: Parameter 'id' is not assigned and could be declared final
-src/com/accolite/service/ProductService.java:18:	ShortVariable: Avoid variables with short names like id
-src/com/accolite/service/ProductService.java:18:	ShortVariable: Avoid variables with short names like id
-src/com/accolite/service/ProductService.java:19:	LocalVariableCouldBeFinal: Local variable 'p' could be declared final
-src/com/accolite/service/ProductService.java:19:	LocalVariableCouldBeFinal: Local variable 'p' could be declared final
-src/com/accolite/service/ProductService.java:20:	IfStmtsMustUseBraces: Avoid using if statements without curly braces
-src/com/accolite/service/ProductService.java:20:	IfStmtsMustUseBraces: Avoid using if statements without curly braces
-src/com/accolite/service/ProductService.java:21:	ControlStatementBraces: This statement should have braces
-src/com/accolite/service/ProductService.java:21:	ControlStatementBraces: This statement should have braces
-src/com/accolite/service/ProductService.java:21:	OnlyOneReturn: A method should have only one exit point, and that should be the last statement in the method
-src/com/accolite/service/ProductService.java:21:	OnlyOneReturn: A method should have only one exit point, and that should be the last statement in the method
-src/com/accolite/service/ProductService.java:23:	LocalVariableCouldBeFinal: Local variable 'x' could be declared final
-src/com/accolite/service/ProductService.java:23:	LocalVariableCouldBeFinal: Local variable 'x' could be declared final
-src/com/accolite/service/ProductService.java:23:	ShortVariable: Avoid variables with short names like x
-src/com/accolite/service/ProductService.java:23:	ShortVariable: Avoid variables with short names like x
-src/com/accolite/service/ProductService.java:24:	UnnecessaryLocalBeforeReturn: Consider simply returning the value vs storing it in local variable 'x'
-src/com/accolite/service/ProductService.java:24:	UnnecessaryLocalBeforeReturn: Consider simply returning the value vs storing it in local variable 'x'
-src/com/accolite/service/ProductService.java:32:	CommentRequired: Public method and constructor comments are required
-src/com/accolite/service/ProductService.java:32:	CommentRequired: Public method and constructor comments are required
-src/com/accolite/service/ProductService.java:33:	DataflowAnomalyAnalysis: Found 'DD'-anomaly for variable 'products' (lines '33'-'37').
-src/com/accolite/service/ProductService.java:33:	DataflowAnomalyAnalysis: Found 'DD'-anomaly for variable 'products' (lines '33'-'37').
-src/com/accolite/service/ProductService.java:34:	DataflowAnomalyAnalysis: Found 'DU'-anomaly for variable 'i' (lines '34'-'42').
-src/com/accolite/service/ProductService.java:34:	DataflowAnomalyAnalysis: Found 'DU'-anomaly for variable 'i' (lines '34'-'42').
-src/com/accolite/service/ProductService.java:34:	ShortVariable: Avoid variables with short names like i
-src/com/accolite/service/ProductService.java:34:	ShortVariable: Avoid variables with short names like i
-src/com/accolite/service/ProductService.java:36:	LocalVariableCouldBeFinal: Local variable 'p' could be declared final
-src/com/accolite/service/ProductService.java:36:	LocalVariableCouldBeFinal: Local variable 'p' could be declared final
-src/com/accolite/service/ProductService.java:37:	DataflowAnomalyAnalysis: Found 'DD'-anomaly for variable 'products' (lines '37'-'37').
-src/com/accolite/service/ProductService.java:37:	DataflowAnomalyAnalysis: Found 'DD'-anomaly for variable 'products' (lines '37'-'37').
-src/com/accolite/service/ProductService.java:38:	DataflowAnomalyAnalysis: Found 'DU'-anomaly for variable 'i' (lines '38'-'42').
-src/com/accolite/service/ProductService.java:38:	DataflowAnomalyAnalysis: Found 'DU'-anomaly for variable 'i' (lines '38'-'42').
-src/com/accolite/service/ProductService.java:44:	CommentRequired: Public method and constructor comments are required
-src/com/accolite/service/ProductService.java:44:	CommentRequired: Public method and constructor comments are required
-src/com/accolite/service/ProductService.java:44:	MethodArgumentCouldBeFinal: Parameter 'p' is not assigned and could be declared final
-src/com/accolite/service/ProductService.java:44:	MethodArgumentCouldBeFinal: Parameter 'p' is not assigned and could be declared final
-src/com/accolite/service/ProductService.java:44:	ShortVariable: Avoid variables with short names like p
-src/com/accolite/service/ProductService.java:44:	ShortVariable: Avoid variables with short names like p
-src/com/accolite/service/ProductService.java:48:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
-src/com/accolite/service/ProductService.java:48:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
-src/com/accolite/service/ProductService.java:51:	OnlyOneReturn: A method should have only one exit point, and that should be the last statement in the method
-src/com/accolite/service/ProductService.java:51:	OnlyOneReturn: A method should have only one exit point, and that should be the last statement in the method
-src/com/accolite/service/ProductService.java:58:	CommentRequired: Public method and constructor comments are required
-src/com/accolite/service/ProductService.java:58:	CommentRequired: Public method and constructor comments are required
-src/com/accolite/service/ProductService.java:58:	MethodArgumentCouldBeFinal: Parameter 'p' is not assigned and could be declared final
-src/com/accolite/service/ProductService.java:58:	MethodArgumentCouldBeFinal: Parameter 'p' is not assigned and could be declared final
-src/com/accolite/service/ProductService.java:58:	ShortVariable: Avoid variables with short names like p
-src/com/accolite/service/ProductService.java:58:	ShortVariable: Avoid variables with short names like p
-src/com/accolite/service/ProductService.java:60:	LocalVariableCouldBeFinal: Local variable 'x' could be declared final
-src/com/accolite/service/ProductService.java:60:	LocalVariableCouldBeFinal: Local variable 'x' could be declared final
+src/com/accolite/service/ProductService.java:12:	CommentRequired: Class comments are required
+src/com/accolite/service/ProductService.java:12:	CommentRequired: Class comments are required
+src/com/accolite/service/ProductService.java:14:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/com/accolite/service/ProductService.java:14:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/com/accolite/service/ProductService.java:14:	CommentRequired: Field comments are required
+src/com/accolite/service/ProductService.java:14:	CommentRequired: Field comments are required
+src/com/accolite/service/ProductService.java:14:	ImmutableField: Private field 'listOfProducts' could be made final; it is only initialized in the declaration or constructor.
+src/com/accolite/service/ProductService.java:14:	ImmutableField: Private field 'listOfProducts' could be made final; it is only initialized in the declaration or constructor.
+src/com/accolite/service/ProductService.java:14:	UseDiamondOperator: Explicit type arguments can be replaced by Diamond Operator
+src/com/accolite/service/ProductService.java:14:	UseDiamondOperator: Explicit type arguments can be replaced by Diamond Operator
+src/com/accolite/service/ProductService.java:16:	CommentRequired: Public method and constructor comments are required
+src/com/accolite/service/ProductService.java:16:	CommentRequired: Public method and constructor comments are required
+src/com/accolite/service/ProductService.java:26:	CommentRequired: Public method and constructor comments are required
+src/com/accolite/service/ProductService.java:26:	CommentRequired: Public method and constructor comments are required
+src/com/accolite/service/ProductService.java:26:	MethodArgumentCouldBeFinal: Parameter 'id' is not assigned and could be declared final
+src/com/accolite/service/ProductService.java:26:	MethodArgumentCouldBeFinal: Parameter 'id' is not assigned and could be declared final
+src/com/accolite/service/ProductService.java:26:	ShortVariable: Avoid variables with short names like id
+src/com/accolite/service/ProductService.java:26:	ShortVariable: Avoid variables with short names like id
+src/com/accolite/service/ProductService.java:27:	LocalVariableCouldBeFinal: Local variable 'p' could be declared final
+src/com/accolite/service/ProductService.java:27:	LocalVariableCouldBeFinal: Local variable 'p' could be declared final
+src/com/accolite/service/ProductService.java:28:	IfStmtsMustUseBraces: Avoid using if statements without curly braces
+src/com/accolite/service/ProductService.java:28:	IfStmtsMustUseBraces: Avoid using if statements without curly braces
+src/com/accolite/service/ProductService.java:29:	ControlStatementBraces: This statement should have braces
+src/com/accolite/service/ProductService.java:29:	ControlStatementBraces: This statement should have braces
+src/com/accolite/service/ProductService.java:29:	OnlyOneReturn: A method should have only one exit point, and that should be the last statement in the method
+src/com/accolite/service/ProductService.java:29:	OnlyOneReturn: A method should have only one exit point, and that should be the last statement in the method
+src/com/accolite/service/ProductService.java:33:	LocalVariableCouldBeFinal: Local variable 'x' could be declared final
+src/com/accolite/service/ProductService.java:33:	LocalVariableCouldBeFinal: Local variable 'x' could be declared final
+src/com/accolite/service/ProductService.java:33:	ShortVariable: Avoid variables with short names like x
+src/com/accolite/service/ProductService.java:33:	ShortVariable: Avoid variables with short names like x
+src/com/accolite/service/ProductService.java:35:	UnnecessaryLocalBeforeReturn: Consider simply returning the value vs storing it in local variable 'x'
+src/com/accolite/service/ProductService.java:35:	UnnecessaryLocalBeforeReturn: Consider simply returning the value vs storing it in local variable 'x'
+src/com/accolite/service/ProductService.java:43:	CommentRequired: Public method and constructor comments are required
+src/com/accolite/service/ProductService.java:43:	CommentRequired: Public method and constructor comments are required
+src/com/accolite/service/ProductService.java:44:	DataflowAnomalyAnalysis: Found 'DD'-anomaly for variable 'products' (lines '33'-'37').
+src/com/accolite/service/ProductService.java:44:	DataflowAnomalyAnalysis: Found 'DD'-anomaly for variable 'products' (lines '33'-'37').
+src/com/accolite/service/ProductService.java:45:	DataflowAnomalyAnalysis: Found 'DU'-anomaly for variable 'i' (lines '34'-'42').
+src/com/accolite/service/ProductService.java:45:	DataflowAnomalyAnalysis: Found 'DU'-anomaly for variable 'i' (lines '34'-'42').
+src/com/accolite/service/ProductService.java:45:	ShortVariable: Avoid variables with short names like i
+src/com/accolite/service/ProductService.java:45:	ShortVariable: Avoid variables with short names like i
+src/com/accolite/service/ProductService.java:47:	LocalVariableCouldBeFinal: Local variable 'p' could be declared final
+src/com/accolite/service/ProductService.java:47:	LocalVariableCouldBeFinal: Local variable 'p' could be declared final
+src/com/accolite/service/ProductService.java:48:	DataflowAnomalyAnalysis: Found 'DD'-anomaly for variable 'products' (lines '37'-'37').
+src/com/accolite/service/ProductService.java:48:	DataflowAnomalyAnalysis: Found 'DD'-anomaly for variable 'products' (lines '37'-'37').
+src/com/accolite/service/ProductService.java:49:	DataflowAnomalyAnalysis: Found 'DU'-anomaly for variable 'i' (lines '38'-'42').
+src/com/accolite/service/ProductService.java:49:	DataflowAnomalyAnalysis: Found 'DU'-anomaly for variable 'i' (lines '38'-'42').
+src/com/accolite/service/ProductService.java:55:	CommentRequired: Public method and constructor comments are required
+src/com/accolite/service/ProductService.java:55:	CommentRequired: Public method and constructor comments are required
+src/com/accolite/service/ProductService.java:55:	MethodArgumentCouldBeFinal: Parameter 'p' is not assigned and could be declared final
+src/com/accolite/service/ProductService.java:55:	MethodArgumentCouldBeFinal: Parameter 'p' is not assigned and could be declared final
+src/com/accolite/service/ProductService.java:55:	ShortVariable: Avoid variables with short names like p
+src/com/accolite/service/ProductService.java:55:	ShortVariable: Avoid variables with short names like p
+src/com/accolite/service/ProductService.java:59:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/com/accolite/service/ProductService.java:59:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/com/accolite/service/ProductService.java:63:	OnlyOneReturn: A method should have only one exit point, and that should be the last statement in the method
+src/com/accolite/service/ProductService.java:63:	OnlyOneReturn: A method should have only one exit point, and that should be the last statement in the method
 src/com/accolite/service/ProductService.java:71:	CommentRequired: Public method and constructor comments are required
 src/com/accolite/service/ProductService.java:71:	CommentRequired: Public method and constructor comments are required
 src/com/accolite/service/ProductService.java:71:	MethodArgumentCouldBeFinal: Parameter 'p' is not assigned and could be declared final
 src/com/accolite/service/ProductService.java:71:	MethodArgumentCouldBeFinal: Parameter 'p' is not assigned and could be declared final
 src/com/accolite/service/ProductService.java:71:	ShortVariable: Avoid variables with short names like p
 src/com/accolite/service/ProductService.java:71:	ShortVariable: Avoid variables with short names like p
-src/com/accolite/service/ProductServiceTest.java:10:	AtLeastOneConstructor: Each class should declare at least one constructor
-src/com/accolite/service/ProductServiceTest.java:10:	AtLeastOneConstructor: Each class should declare at least one constructor
-src/com/accolite/service/ProductServiceTest.java:10:	CommentRequired: Class comments are required
-src/com/accolite/service/ProductServiceTest.java:10:	CommentRequired: Class comments are required
-src/com/accolite/service/ProductServiceTest.java:11:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
-src/com/accolite/service/ProductServiceTest.java:11:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
-src/com/accolite/service/ProductServiceTest.java:11:	CommentRequired: Field comments are required
-src/com/accolite/service/ProductServiceTest.java:11:	CommentRequired: Field comments are required
-src/com/accolite/service/ProductServiceTest.java:11:	ImmutableField: Private field 'listOfProducts' could be made final; it is only initialized in the declaration or constructor.
-src/com/accolite/service/ProductServiceTest.java:11:	ImmutableField: Private field 'listOfProducts' could be made final; it is only initialized in the declaration or constructor.
-src/com/accolite/service/ProductServiceTest.java:11:	UseDiamondOperator: Explicit type arguments can be replaced by Diamond Operator
-src/com/accolite/service/ProductServiceTest.java:11:	UseDiamondOperator: Explicit type arguments can be replaced by Diamond Operator
-src/com/accolite/service/ProductServiceTest.java:13:	CommentDefaultAccessModifier: To avoid mistakes add a comment at the beginning of the init method if you want a default access modifier
-src/com/accolite/service/ProductServiceTest.java:13:	CommentDefaultAccessModifier: To avoid mistakes add a comment at the beginning of the init method if you want a default access modifier
-src/com/accolite/service/ProductServiceTest.java:13:	DefaultPackage: Use explicit scoping instead of the default package private level
-src/com/accolite/service/ProductServiceTest.java:13:	DefaultPackage: Use explicit scoping instead of the default package private level
-src/com/accolite/service/ProductServiceTest.java:13:	DetachedTestCase: Probable detached JUnit test case.
-src/com/accolite/service/ProductServiceTest.java:13:	DetachedTestCase: Probable detached JUnit test case.
-src/com/accolite/service/ProductServiceTest.java:21:	DefaultPackage: Use explicit scoping instead of the default package private level
-src/com/accolite/service/ProductServiceTest.java:21:	DefaultPackage: Use explicit scoping instead of the default package private level
-src/com/accolite/service/ProductServiceTest.java:22:	CommentDefaultAccessModifier: To avoid mistakes add a comment at the beginning of the testSearchByID method if you want a default access modifier
-src/com/accolite/service/ProductServiceTest.java:22:	CommentDefaultAccessModifier: To avoid mistakes add a comment at the beginning of the testSearchByID method if you want a default access modifier
-src/com/accolite/service/ProductServiceTest.java:23:	LocalVariableCouldBeFinal: Local variable 'ps' could be declared final
-src/com/accolite/service/ProductServiceTest.java:23:	LocalVariableCouldBeFinal: Local variable 'ps' could be declared final
-src/com/accolite/service/ProductServiceTest.java:23:	ShortVariable: Avoid variables with short names like ps
-src/com/accolite/service/ProductServiceTest.java:23:	ShortVariable: Avoid variables with short names like ps
-src/com/accolite/service/ProductServiceTest.java:24:	LocalVariableCouldBeFinal: Local variable 'expectedOutput' could be declared final
-src/com/accolite/service/ProductServiceTest.java:24:	LocalVariableCouldBeFinal: Local variable 'expectedOutput' could be declared final
-src/com/accolite/service/ProductServiceTest.java:25:	LocalVariableCouldBeFinal: Local variable 'obtainedOutput' could be declared final
-src/com/accolite/service/ProductServiceTest.java:25:	LocalVariableCouldBeFinal: Local variable 'obtainedOutput' could be declared final
-src/com/accolite/service/ProductServiceTest.java:26:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
-src/com/accolite/service/ProductServiceTest.java:26:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
-src/com/accolite/service/ProductServiceTest.java:27:	ControlStatementBraces: This statement should have braces
-src/com/accolite/service/ProductServiceTest.java:27:	ControlStatementBraces: This statement should have braces
-src/com/accolite/service/ProductServiceTest.java:27:	IfElseStmtsMustUseBraces: Avoid using if...else statements without curly braces
-src/com/accolite/service/ProductServiceTest.java:27:	IfElseStmtsMustUseBraces: Avoid using if...else statements without curly braces
-src/com/accolite/service/ProductServiceTest.java:27:	SystemPrintln: System.out.println is used
-src/com/accolite/service/ProductServiceTest.java:27:	SystemPrintln: System.out.println is used
-src/com/accolite/service/ProductServiceTest.java:29:	ControlStatementBraces: This statement should have braces
-src/com/accolite/service/ProductServiceTest.java:29:	ControlStatementBraces: This statement should have braces
-src/com/accolite/service/ProductServiceTest.java:29:	IfElseStmtsMustUseBraces: Avoid using if...else statements without curly braces
-src/com/accolite/service/ProductServiceTest.java:29:	IfElseStmtsMustUseBraces: Avoid using if...else statements without curly braces
-src/com/accolite/service/ProductServiceTest.java:32:	DefaultPackage: Use explicit scoping instead of the default package private level
-src/com/accolite/service/ProductServiceTest.java:32:	DefaultPackage: Use explicit scoping instead of the default package private level
-src/com/accolite/service/ProductServiceTest.java:33:	CommentDefaultAccessModifier: To avoid mistakes add a comment at the beginning of the testGetAllProducts method if you want a default access modifier
-src/com/accolite/service/ProductServiceTest.java:33:	CommentDefaultAccessModifier: To avoid mistakes add a comment at the beginning of the testGetAllProducts method if you want a default access modifier
-src/com/accolite/service/ProductServiceTest.java:35:	DataflowAnomalyAnalysis: Found 'DD'-anomaly for variable 'expectedProducts' (lines '35'-'38').
-src/com/accolite/service/ProductServiceTest.java:35:	DataflowAnomalyAnalysis: Found 'DD'-anomaly for variable 'expectedProducts' (lines '35'-'38').
-src/com/accolite/service/ProductServiceTest.java:35:	DataflowAnomalyAnalysis: Found 'DU'-anomaly for variable 'expectedProducts' (lines '35'-'54').
-src/com/accolite/service/ProductServiceTest.java:35:	DataflowAnomalyAnalysis: Found 'DU'-anomaly for variable 'expectedProducts' (lines '35'-'54').
-src/com/accolite/service/ProductServiceTest.java:38:	DataflowAnomalyAnalysis: Found 'DD'-anomaly for variable 'expectedProducts' (lines '38'-'38').
-src/com/accolite/service/ProductServiceTest.java:38:	DataflowAnomalyAnalysis: Found 'DD'-anomaly for variable 'expectedProducts' (lines '38'-'38').
-src/com/accolite/service/ProductServiceTest.java:38:	DataflowAnomalyAnalysis: Found 'DU'-anomaly for variable 'expectedProducts' (lines '38'-'54').
-src/com/accolite/service/ProductServiceTest.java:38:	DataflowAnomalyAnalysis: Found 'DU'-anomaly for variable 'expectedProducts' (lines '38'-'54').
-src/com/accolite/service/ProductServiceTest.java:40:	LocalVariableCouldBeFinal: Local variable 'ps' could be declared final
-src/com/accolite/service/ProductServiceTest.java:40:	LocalVariableCouldBeFinal: Local variable 'ps' could be declared final
-src/com/accolite/service/ProductServiceTest.java:40:	ShortVariable: Avoid variables with short names like ps
-src/com/accolite/service/ProductServiceTest.java:40:	ShortVariable: Avoid variables with short names like ps
-src/com/accolite/service/ProductServiceTest.java:41:	DataflowAnomalyAnalysis: Found 'DU'-anomaly for variable 'obtainedProducts' (lines '41'-'54').
-src/com/accolite/service/ProductServiceTest.java:41:	DataflowAnomalyAnalysis: Found 'DU'-anomaly for variable 'obtainedProducts' (lines '41'-'54').
-src/com/accolite/service/ProductServiceTest.java:41:	LocalVariableCouldBeFinal: Local variable 'obtainedProducts' could be declared final
-src/com/accolite/service/ProductServiceTest.java:41:	LocalVariableCouldBeFinal: Local variable 'obtainedProducts' could be declared final
-src/com/accolite/service/ProductServiceTest.java:45:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
-src/com/accolite/service/ProductServiceTest.java:45:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
-src/com/accolite/service/ProductServiceTest.java:45:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
-src/com/accolite/service/ProductServiceTest.java:45:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
-src/com/accolite/service/ProductServiceTest.java:45:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
-src/com/accolite/service/ProductServiceTest.java:45:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
-src/com/accolite/service/ProductServiceTest.java:45:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
-src/com/accolite/service/ProductServiceTest.java:45:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
-src/com/accolite/service/ProductServiceTest.java:46:	ControlStatementBraces: This statement should have braces
-src/com/accolite/service/ProductServiceTest.java:46:	ControlStatementBraces: This statement should have braces
-src/com/accolite/service/ProductServiceTest.java:46:	IfElseStmtsMustUseBraces: Avoid using if...else statements without curly braces
-src/com/accolite/service/ProductServiceTest.java:46:	IfElseStmtsMustUseBraces: Avoid using if...else statements without curly braces
-src/com/accolite/service/ProductServiceTest.java:56:	DefaultPackage: Use explicit scoping instead of the default package private level
-src/com/accolite/service/ProductServiceTest.java:56:	DefaultPackage: Use explicit scoping instead of the default package private level
-src/com/accolite/service/ProductServiceTest.java:57:	CommentDefaultAccessModifier: To avoid mistakes add a comment at the beginning of the testDeleteProduct method if you want a default access modifier
-src/com/accolite/service/ProductServiceTest.java:57:	CommentDefaultAccessModifier: To avoid mistakes add a comment at the beginning of the testDeleteProduct method if you want a default access modifier
-src/com/accolite/service/ProductServiceTest.java:59:	LocalVariableCouldBeFinal: Local variable 'ps' could be declared final
-src/com/accolite/service/ProductServiceTest.java:59:	LocalVariableCouldBeFinal: Local variable 'ps' could be declared final
-src/com/accolite/service/ProductServiceTest.java:59:	ShortVariable: Avoid variables with short names like ps
-src/com/accolite/service/ProductServiceTest.java:59:	ShortVariable: Avoid variables with short names like ps
-src/com/accolite/service/ProductServiceTest.java:60:	LocalVariableCouldBeFinal: Local variable 'expectedOutput' could be declared final
-src/com/accolite/service/ProductServiceTest.java:60:	LocalVariableCouldBeFinal: Local variable 'expectedOutput' could be declared final
-src/com/accolite/service/ProductServiceTest.java:61:	LocalVariableCouldBeFinal: Local variable 'p' could be declared final
-src/com/accolite/service/ProductServiceTest.java:61:	LocalVariableCouldBeFinal: Local variable 'p' could be declared final
-src/com/accolite/service/ProductServiceTest.java:61:	ShortVariable: Avoid variables with short names like p
-src/com/accolite/service/ProductServiceTest.java:61:	ShortVariable: Avoid variables with short names like p
-src/com/accolite/service/ProductServiceTest.java:62:	LocalVariableCouldBeFinal: Local variable 'obtainedOutput' could be declared final
-src/com/accolite/service/ProductServiceTest.java:62:	LocalVariableCouldBeFinal: Local variable 'obtainedOutput' could be declared final
-src/com/accolite/service/ProductServiceTest.java:64:	ControlStatementBraces: This statement should have braces
-src/com/accolite/service/ProductServiceTest.java:64:	ControlStatementBraces: This statement should have braces
-src/com/accolite/service/ProductServiceTest.java:64:	IfElseStmtsMustUseBraces: Avoid using if...else statements without curly braces
-src/com/accolite/service/ProductServiceTest.java:64:	IfElseStmtsMustUseBraces: Avoid using if...else statements without curly braces
-src/com/accolite/service/ProductServiceTest.java:64:	SystemPrintln: System.out.println is used
-src/com/accolite/service/ProductServiceTest.java:64:	SystemPrintln: System.out.println is used
-src/com/accolite/service/ProductServiceTest.java:66:	ControlStatementBraces: This statement should have braces
-src/com/accolite/service/ProductServiceTest.java:66:	ControlStatementBraces: This statement should have braces
-src/com/accolite/service/ProductServiceTest.java:66:	IfElseStmtsMustUseBraces: Avoid using if...else statements without curly braces
-src/com/accolite/service/ProductServiceTest.java:66:	IfElseStmtsMustUseBraces: Avoid using if...else statements without curly braces
-src/com/accolite/service/ProductServiceTest.java:71:	DefaultPackage: Use explicit scoping instead of the default package private level
-src/com/accolite/service/ProductServiceTest.java:71:	DefaultPackage: Use explicit scoping instead of the default package private level
-src/com/accolite/service/ProductServiceTest.java:72:	CommentDefaultAccessModifier: To avoid mistakes add a comment at the beginning of the testInsertProduct method if you want a default access modifier
-src/com/accolite/service/ProductServiceTest.java:72:	CommentDefaultAccessModifier: To avoid mistakes add a comment at the beginning of the testInsertProduct method if you want a default access modifier
-src/com/accolite/service/ProductServiceTest.java:73:	LocalVariableCouldBeFinal: Local variable 'ps' could be declared final
-src/com/accolite/service/ProductServiceTest.java:73:	LocalVariableCouldBeFinal: Local variable 'ps' could be declared final
-src/com/accolite/service/ProductServiceTest.java:73:	ShortVariable: Avoid variables with short names like ps
-src/com/accolite/service/ProductServiceTest.java:73:	ShortVariable: Avoid variables with short names like ps
-src/com/accolite/service/ProductServiceTest.java:74:	LocalVariableCouldBeFinal: Local variable 'expectedOutput' could be declared final
-src/com/accolite/service/ProductServiceTest.java:74:	LocalVariableCouldBeFinal: Local variable 'expectedOutput' could be declared final
-src/com/accolite/service/ProductServiceTest.java:75:	LocalVariableCouldBeFinal: Local variable 'obtainedOutput' could be declared final
-src/com/accolite/service/ProductServiceTest.java:75:	LocalVariableCouldBeFinal: Local variable 'obtainedOutput' could be declared final
-src/com/accolite/service/ProductServiceTest.java:77:	ControlStatementBraces: This statement should have braces
-src/com/accolite/service/ProductServiceTest.java:77:	ControlStatementBraces: This statement should have braces
-src/com/accolite/service/ProductServiceTest.java:77:	IfElseStmtsMustUseBraces: Avoid using if...else statements without curly braces
-src/com/accolite/service/ProductServiceTest.java:77:	IfElseStmtsMustUseBraces: Avoid using if...else statements without curly braces
-src/com/accolite/service/ProductServiceTest.java:77:	SystemPrintln: System.out.println is used
-src/com/accolite/service/ProductServiceTest.java:77:	SystemPrintln: System.out.println is used
-src/com/accolite/service/ProductServiceTest.java:79:	ControlStatementBraces: This statement should have braces
-src/com/accolite/service/ProductServiceTest.java:79:	ControlStatementBraces: This statement should have braces
-src/com/accolite/service/ProductServiceTest.java:79:	IfElseStmtsMustUseBraces: Avoid using if...else statements without curly braces
-src/com/accolite/service/ProductServiceTest.java:79:	IfElseStmtsMustUseBraces: Avoid using if...else statements without curly braces
+src/com/accolite/service/ProductService.java:73:	LocalVariableCouldBeFinal: Local variable 'x' could be declared final
+src/com/accolite/service/ProductService.java:73:	LocalVariableCouldBeFinal: Local variable 'x' could be declared final
+src/com/accolite/service/ProductService.java:85:	CommentRequired: Public method and constructor comments are required
+src/com/accolite/service/ProductService.java:85:	CommentRequired: Public method and constructor comments are required
+src/com/accolite/service/ProductService.java:85:	MethodArgumentCouldBeFinal: Parameter 'p' is not assigned and could be declared final
+src/com/accolite/service/ProductService.java:85:	MethodArgumentCouldBeFinal: Parameter 'p' is not assigned and could be declared final
+src/com/accolite/service/ProductService.java:85:	ShortVariable: Avoid variables with short names like p
+src/com/accolite/service/ProductService.java:85:	ShortVariable: Avoid variables with short names like p

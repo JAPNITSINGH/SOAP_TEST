@@ -3,24 +3,35 @@ package com.accolite.service;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ProductService {
+import org.apache.logging.log4j.Level;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.core.config.Configurator;
+import org.apache.logging.log4j.core.config.DefaultConfiguration;
 
+public class ProductService {
+	final static Logger logger = LogManager.getLogger(ProductService.class.getName());
 	private  List<Product> listOfProducts = new ArrayList<Product>();
 
 	public ProductService() {
-		
+		 Configurator.initialize(new DefaultConfiguration());
+		    Configurator.setRootLevel(Level.INFO);
 		listOfProducts.add(new Product(1, "Apple"));
 		listOfProducts.add(new Product(2, "Banana"));
 		listOfProducts.add(new Product(3, "Carrot"));
 		listOfProducts.add(new Product(4, "Drum Sticks"));
+		logger.info("Constructor Successful");
 	}
 
 	public Product searchByID(int id) {
 		for (Product p : listOfProducts) {
 			if (p.getId() == id)
-				return p;
+				{	logger.info("Search Complete , Element  found");
+					return p;
+				}
 		}
 		Product x = new Product(0, "No Product Found");
+		logger.info("Search Complete , Element not found");
 		return x;
 	}
 
@@ -37,7 +48,7 @@ public class ProductService {
 			products[i] = p;
 			i++;
 		}
-
+		logger.info("Extracted products ");
 		return products;
 	}
 	
@@ -48,10 +59,12 @@ public class ProductService {
 			if( listOfProducts.get(i).getId() == p.getId())
 				 {
 					listOfProducts.remove(i);
+					logger.info("Delete successful");
 					return true;
 				 }
 		}
 		//return listOfProducts.remove(p);
+		logger.info("Delete failed");
 		return false;
 	}
 	
@@ -65,6 +78,7 @@ public class ProductService {
 			}
 				
 		}
+		logger.info("Update successful");
 		return true;
 	}
 
